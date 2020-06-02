@@ -3,18 +3,37 @@ package org.kmenubar
 import kotlinx.cinterop.ObjCAction
 import platform.AppKit.NSMenu
 import platform.AppKit.NSMenuItem
+import platform.AppKit.NSStatusBar
 import platform.AppKit.NSStatusBarButton
 import platform.AppKit.NSStatusItem
-import platform.AppKit.enabled
+import platform.AppKit.NSVariableStatusItemLength
+import platform.AppKit.title
 import platform.Foundation.NSSelectorFromString
 import platform.darwin.NSObject
 
-class MenuBarDsl(private val statusItem: NSStatusItem) {
-  fun button(block: MenuBarRootButton.() -> Unit) {
-    MenuBarRootButton(statusItem.button!!).apply(block)
+class MenuBar(private val statusBar: NSStatusBar) {
+  fun item(block: MenuBarStatusItem.() -> Unit) {
+    val item = statusBar.statusItemWithLength(NSVariableStatusItemLength)
+    MenuBarStatusItem(item).apply(block)
+  }
+}
+
+class MenuBarStatusItem(private val statusItem: NSStatusItem) {
+  var title: String?
+    get() = statusItem.title
+    set(value) {
+      statusItem.title = value
+    }
+
+  fun title(title: String?) {
+    statusItem.title = title
   }
 
-  fun menu(block: MenuBarMenu.() -> Unit) {
+  fun button(block: MenuBarRootButton.() -> Unit = {}): MenuBarRootButton {
+    return MenuBarRootButton(statusItem.button!!).apply(block)
+  }
+
+  fun menu(block: MenuBarMenu.() -> Unit = {}): MenuBarMenu {
     var menu = statusItem.menu
 
     if (menu == null) {
@@ -22,21 +41,31 @@ class MenuBarDsl(private val statusItem: NSStatusItem) {
       statusItem.menu = menu
     }
 
-    MenuBarMenu(menu).apply(block)
+    return MenuBarMenu(menu).apply(block)
   }
 
-  fun item(block: MenuBarMenuItem.() -> Unit) {
-    menu { item(block) }
+  fun item(block: MenuBarMenuItem.() -> Unit): MenuBarMenuItem {
+    return menu().item(block)
   }
 
-  fun item(title: String, block: MenuBarMenuItem.() -> Unit = {}) {
-    menu {
-      item(title, block)
-    }
+  fun item(title: String, block: MenuBarMenuItem.() -> Unit = {}): MenuBarMenuItem {
+    return menu().item(title, block)
   }
 
-  fun advanced(block: NSStatusItem.() -> Unit) {
-    statusItem.apply(block)
+  fun submenu(block: MenuBarMenuItem.() -> Unit): MenuBarMenuItem {
+    return menu().item(block)
+  }
+
+  fun submenu(title: String, block: MenuBarMenu.() -> Unit): MenuBarMenuItem {
+    return menu().submenu(title, block)
+  }
+
+  fun remove(item: MenuBarMenuItem) {
+    menu().remove(item)
+  }
+
+  fun advanced(block: NSStatusItem.() -> Unit = {}): NSStatusItem {
+    return statusItem.apply(block)
   }
 }
 
@@ -51,18 +80,20 @@ class MenuBarRootButton(private val button: NSStatusBarButton) {
     button.title = title
   }
 
-  fun advanced(block: NSStatusBarButton.() -> Unit) {
-    button.apply(block)
+  fun advanced(block: NSStatusBarButton.() -> Unit = {}): NSStatusBarButton {
+    return button.apply(block)
   }
 }
 
 class MenuBarMenu(private val menu: NSMenu) {
-  fun item(block: MenuBarMenuItem.() -> Unit) {
+  fun item(block: MenuBarMenuItem.() -> Unit): MenuBarMenuItem {
     val item = NSMenuItem()
-    MenuBarMenuItem(item).apply(block)
+    val wrapper = MenuBarMenuItem(item).apply(block)
+    menu.addItem(item)
+    return wrapper
   }
 
-  fun item(title: String, block: MenuBarMenuItem.() -> Unit = {}) {
+  fun item(title: String, block: MenuBarMenuItem.() -> Unit = {}): MenuBarMenuItem {
     val handler = MenuBarActionHandler()
     val item = NSMenuItem(
       title,
@@ -71,12 +102,27 @@ class MenuBarMenu(private val menu: NSMenu) {
     )
     item.target = handler
     item.enabled = true
-    MenuBarMenuItem(item).apply(block)
+    val wrapper = MenuBarMenuItem(item).apply(block)
     menu.addItem(item)
+    return wrapper
   }
 
-  fun advanced(block: NSMenu.() -> Unit) {
-    menu.apply(block)
+  fun submenu(title: String, block: MenuBarMenu.() -> Unit = {}): MenuBarMenuItem {
+    return item(title) {
+      submenu(block)
+    }
+  }
+
+  fun remove(item: MenuBarMenuItem) {
+    menu.removeItem(item.advanced())
+  }
+
+  fun removeAllItems() {
+    menu.removeAllItems()
+  }
+
+  fun advanced(block: NSMenu.() -> Unit = {}): NSMenu {
+    return menu.apply(block)
   }
 }
 
@@ -87,18 +133,37 @@ class MenuBarMenuItem(private val item: NSMenuItem) {
       item.title = value
     }
 
+  var shortcut: String
+    get() = item.keyEquivalent
+    set(value) {
+      item.keyEquivalent = value
+    }
+
   fun title(title: String) {
     item.title = title
   }
 
-  fun action(block: () -> Unit) {
+  fun shortcut(shortcut: String) {
+    item.keyEquivalent = shortcut
+  }
+
+  fun action(block: () -> Unit): MenuBarActionHandler {
     val handler = item.target as MenuBarActionHandler
     handler.block = block
     item.setAction(NSSelectorFromString("call"))
+    return handler
   }
 
-  fun advanced(block: NSMenuItem.() -> Unit) {
-    item.apply(block)
+  fun submenu(block: MenuBarMenu.() -> Unit): MenuBarMenu {
+    if (item.submenu == null) {
+      item.submenu = NSMenu()
+    }
+
+    return MenuBarMenu(item.submenu!!).apply(block)
+  }
+
+  fun advanced(block: NSMenuItem.() -> Unit = {}): NSMenuItem {
+    return item.apply(block)
   }
 }
 
