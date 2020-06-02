@@ -12,6 +12,11 @@
 		2AAA9F932485C1A600790B42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAA9F912485C1A600790B42 /* Main.storyboard */; };
 		2AAA9F9F2485C35200790B42 /* KotlinMenuBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAA9F9E2485C35200790B42 /* KotlinMenuBar.framework */; };
 		2AAA9FA02485C35200790B42 /* KotlinMenuBar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAA9F9E2485C35200790B42 /* KotlinMenuBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2AAA9FA9248608CE00790B42 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2AAA9FA4248608CE00790B42 /* README.md */; };
+		2AAA9FAA248608CE00790B42 /* settings.gradle.kts in Resources */ = {isa = PBXBuildFile; fileRef = 2AAA9FA5248608CE00790B42 /* settings.gradle.kts */; };
+		2AAA9FAB248608CE00790B42 /* src in Resources */ = {isa = PBXBuildFile; fileRef = 2AAA9FA6248608CE00790B42 /* src */; };
+		2AAA9FAC248608CE00790B42 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 2AAA9FA7248608CE00790B42 /* LICENSE.md */; };
+		2AAA9FAD248608CE00790B42 /* build.gradle.kts in Resources */ = {isa = PBXBuildFile; fileRef = 2AAA9FA8248608CE00790B42 /* build.gradle.kts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +41,11 @@
 		2AAA9F942485C1A600790B42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AAA9F952485C1A600790B42 /* KMenuBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KMenuBar.entitlements; sourceTree = "<group>"; };
 		2AAA9F9E2485C35200790B42 /* KotlinMenuBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KotlinMenuBar.framework; path = build/bin/macosX64/debugFramework/KotlinMenuBar.framework; sourceTree = "<group>"; };
+		2AAA9FA4248608CE00790B42 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2AAA9FA5248608CE00790B42 /* settings.gradle.kts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = settings.gradle.kts; sourceTree = "<group>"; };
+		2AAA9FA6248608CE00790B42 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
+		2AAA9FA7248608CE00790B42 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		2AAA9FA8248608CE00790B42 /* build.gradle.kts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = build.gradle.kts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,11 @@
 		2AAA9F7F2485C1A500790B42 = {
 			isa = PBXGroup;
 			children = (
+				2AAA9FA8248608CE00790B42 /* build.gradle.kts */,
+				2AAA9FA7248608CE00790B42 /* LICENSE.md */,
+				2AAA9FA4248608CE00790B42 /* README.md */,
+				2AAA9FA5248608CE00790B42 /* settings.gradle.kts */,
+				2AAA9FA6248608CE00790B42 /* src */,
 				2AAA9F8A2485C1A500790B42 /* KMenuBar */,
 				2AAA9F892485C1A500790B42 /* Products */,
 				2AAA9F9D2485C35200790B42 /* Frameworks */,
@@ -148,8 +163,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AAA9FA9248608CE00790B42 /* README.md in Resources */,
+				2AAA9FAA248608CE00790B42 /* settings.gradle.kts in Resources */,
+				2AAA9FAD248608CE00790B42 /* build.gradle.kts in Resources */,
 				2AAA9F902485C1A600790B42 /* Assets.xcassets in Resources */,
 				2AAA9F932485C1A600790B42 /* Main.storyboard in Resources */,
+				2AAA9FAC248608CE00790B42 /* LICENSE.md in Resources */,
+				2AAA9FAB248608CE00790B42 /* src in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
