@@ -1,3 +1,3 @@
 # KMenuBar
 
-Kotlin macOS Menu Bar API
+Kotlin macOS Menu Bar Application

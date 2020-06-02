@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A6D8F152484ABF6002742C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6D8F142484ABF6002742C6 /* AppDelegate.swift */; };
-		2A6D8F192484ABF8002742C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A6D8F182484ABF8002742C6 /* Assets.xcassets */; };
-		2ADCDCE32484B3990021D15B /* KotlinMenuBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ADCDCE22484B3990021D15B /* KotlinMenuBar.framework */; };
-		2ADCDCE42484B3990021D15B /* KotlinMenuBar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2ADCDCE22484B3990021D15B /* KotlinMenuBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2AAA9F8C2485C1A500790B42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA9F8B2485C1A500790B42 /* AppDelegate.swift */; };
+		2AAA9F902485C1A600790B42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AAA9F8F2485C1A600790B42 /* Assets.xcassets */; };
+		2AAA9F932485C1A600790B42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAA9F912485C1A600790B42 /* Main.storyboard */; };
+		2AAA9F9F2485C35200790B42 /* KotlinMenuBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAA9F9E2485C35200790B42 /* KotlinMenuBar.framework */; };
+		2AAA9FA02485C35200790B42 /* KotlinMenuBar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAA9F9E2485C35200790B42 /* KotlinMenuBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2ADCDCE52484B3990021D15B /* Embed Frameworks */ = {
+		2AAA9FA12485C35200790B42 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2ADCDCE42484B3990021D15B /* KotlinMenuBar.framework in Embed Frameworks */,
+				2AAA9FA02485C35200790B42 /* KotlinMenuBar.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -28,60 +29,60 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2A6D8F112484ABF6002742C6 /* KMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A6D8F142484ABF6002742C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2A6D8F182484ABF8002742C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2A6D8F202484ABF8002742C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A6D8F292484AD3F002742C6 /* KMenuBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KMenuBar.framework; path = build/bin/macosX64/debugFramework/KMenuBar.framework; sourceTree = "<group>"; };
-		2A6D8F2D2484B154002742C6 /* KotlinMenuBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KotlinMenuBar.framework; path = build/bin/macosX64/KotlinMenuBarDebugFramework/KotlinMenuBar.framework; sourceTree = "<group>"; };
-		2ADCDCE22484B3990021D15B /* KotlinMenuBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KotlinMenuBar.framework; path = build/bin/macosX64/debugFramework/KotlinMenuBar.framework; sourceTree = "<group>"; };
+		2AAA9F882485C1A500790B42 /* KMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AAA9F8B2485C1A500790B42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2AAA9F8F2485C1A600790B42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2AAA9F922485C1A600790B42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2AAA9F942485C1A600790B42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AAA9F952485C1A600790B42 /* KMenuBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KMenuBar.entitlements; sourceTree = "<group>"; };
+		2AAA9F9E2485C35200790B42 /* KotlinMenuBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KotlinMenuBar.framework; path = build/bin/macosX64/debugFramework/KotlinMenuBar.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2A6D8F0E2484ABF6002742C6 /* Frameworks */ = {
+		2AAA9F852485C1A500790B42 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ADCDCE32484B3990021D15B /* KotlinMenuBar.framework in Frameworks */,
+				2AAA9F9F2485C35200790B42 /* KotlinMenuBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A6D8F082484ABF6002742C6 = {
+		2AAA9F7F2485C1A500790B42 = {
 			isa = PBXGroup;
 			children = (
-				2A6D8F132484ABF6002742C6 /* KMenuBar */,
-				2A6D8F122484ABF6002742C6 /* Products */,
-				2A6D8F282484AD3F002742C6 /* Frameworks */,
+				2AAA9F8A2485C1A500790B42 /* KMenuBar */,
+				2AAA9F892485C1A500790B42 /* Products */,
+				2AAA9F9D2485C35200790B42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		2A6D8F122484ABF6002742C6 /* Products */ = {
+		2AAA9F892485C1A500790B42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2A6D8F112484ABF6002742C6 /* KMenuBar.app */,
+				2AAA9F882485C1A500790B42 /* KMenuBar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2A6D8F132484ABF6002742C6 /* KMenuBar */ = {
+		2AAA9F8A2485C1A500790B42 /* KMenuBar */ = {
 			isa = PBXGroup;
 			children = (
-				2A6D8F142484ABF6002742C6 /* AppDelegate.swift */,
-				2A6D8F182484ABF8002742C6 /* Assets.xcassets */,
-				2A6D8F202484ABF8002742C6 /* Info.plist */,
+				2AAA9F8B2485C1A500790B42 /* AppDelegate.swift */,
+				2AAA9F8F2485C1A600790B42 /* Assets.xcassets */,
+				2AAA9F912485C1A600790B42 /* Main.storyboard */,
+				2AAA9F942485C1A600790B42 /* Info.plist */,
+				2AAA9F952485C1A600790B42 /* KMenuBar.entitlements */,
 			);
 			path = KMenuBar;
 			sourceTree = "<group>";
 		};
-		2A6D8F282484AD3F002742C6 /* Frameworks */ = {
+		2AAA9F9D2485C35200790B42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2A6D8F2D2484B154002742C6 /* KotlinMenuBar.framework */,
-				2ADCDCE22484B3990021D15B /* KotlinMenuBar.framework */,
-				2A6D8F292484AD3F002742C6 /* KMenuBar.framework */,
+				2AAA9F9E2485C35200790B42 /* KotlinMenuBar.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -89,15 +90,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2A6D8F102484ABF6002742C6 /* KMenuBar */ = {
+		2AAA9F872485C1A500790B42 /* KMenuBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A6D8F242484ABF8002742C6 /* Build configuration list for PBXNativeTarget "KMenuBar" */;
+			buildConfigurationList = 2AAA9F982485C1A600790B42 /* Build configuration list for PBXNativeTarget "KMenuBar" */;
 			buildPhases = (
-				2A6D8F272484ACB2002742C6 /* ShellScript */,
-				2A6D8F0D2484ABF6002742C6 /* Sources */,
-				2A6D8F0E2484ABF6002742C6 /* Frameworks */,
-				2A6D8F0F2484ABF6002742C6 /* Resources */,
-				2ADCDCE52484B3990021D15B /* Embed Frameworks */,
+				2AAA9F9B2485C1CA00790B42 /* ShellScript */,
+				2AAA9F842485C1A500790B42 /* Sources */,
+				2AAA9F9C2485C26A00790B42 /* ShellScript */,
+				2AAA9F852485C1A500790B42 /* Frameworks */,
+				2AAA9F862485C1A500790B42 /* Resources */,
+				2AAA9FA12485C35200790B42 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -105,25 +107,25 @@
 			);
 			name = KMenuBar;
 			productName = KMenuBar;
-			productReference = 2A6D8F112484ABF6002742C6 /* KMenuBar.app */;
+			productReference = 2AAA9F882485C1A500790B42 /* KMenuBar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2A6D8F092484ABF6002742C6 /* Project object */ = {
+		2AAA9F802485C1A500790B42 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Kenneth Endfinger";
 				TargetAttributes = {
-					2A6D8F102484ABF6002742C6 = {
+					2AAA9F872485C1A500790B42 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
 			};
-			buildConfigurationList = 2A6D8F0C2484ABF6002742C6 /* Build configuration list for PBXProject "KMenuBar" */;
+			buildConfigurationList = 2AAA9F832485C1A500790B42 /* Build configuration list for PBXProject "KMenuBar" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -131,29 +133,30 @@
 				en,
 				Base,
 			);
-			mainGroup = 2A6D8F082484ABF6002742C6;
-			productRefGroup = 2A6D8F122484ABF6002742C6 /* Products */;
+			mainGroup = 2AAA9F7F2485C1A500790B42;
+			productRefGroup = 2AAA9F892485C1A500790B42 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A6D8F102484ABF6002742C6 /* KMenuBar */,
+				2AAA9F872485C1A500790B42 /* KMenuBar */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2A6D8F0F2484ABF6002742C6 /* Resources */ = {
+		2AAA9F862485C1A500790B42 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A6D8F192484ABF8002742C6 /* Assets.xcassets in Resources */,
+				2AAA9F902485C1A600790B42 /* Assets.xcassets in Resources */,
+				2AAA9F932485C1A600790B42 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A6D8F272484ACB2002742C6 /* ShellScript */ = {
+		2AAA9F9B2485C1CA00790B42 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -170,21 +173,49 @@
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/sh\nset -e\ncd \"${PROJECT_DIR}\"\nexport JAVA_HOME=\"$(/usr/libexec/java_home -R -v 11)\"\n./gradlew linkDebugFrameworkMacosX64\n";
 		};
+		2AAA9F9C2485C26A00790B42 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -e\n\nif [ -z \"${SWIFT_LINT}\" ]\nthen\n  if which swiftlint > /dev/null\n  then\n    SWIFT_LINT=\"$(which swiftlint)\"\n  elif [ -x \"/usr/local/bin/swiftlint\" ]\n  then\n    SWIFT_LINT=\"/usr/local/bin/swiftlint\"\n  fi\nfi\n\nif [ -x \"${SWIFT_LINT}\" ]\nthen\n  exec \"${SWIFT_LINT}\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2A6D8F0D2484ABF6002742C6 /* Sources */ = {
+		2AAA9F842485C1A500790B42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A6D8F152484ABF6002742C6 /* AppDelegate.swift in Sources */,
+				2AAA9F8C2485C1A500790B42 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		2AAA9F912485C1A600790B42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AAA9F922485C1A600790B42 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		2A6D8F222484ABF8002742C6 /* Debug */ = {
+		2AAA9F962485C1A600790B42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,7 +275,7 @@
 			};
 			name = Debug;
 		};
-		2A6D8F232484ABF8002742C6 /* Release */ = {
+		2AAA9F972485C1A600790B42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -297,15 +328,15 @@
 			};
 			name = Release;
 		};
-		2A6D8F252484ABF8002742C6 /* Debug */ = {
+		2AAA9F992485C1A600790B42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KMenuBar/KMenuBar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3FQW5YTQR8;
-				ENABLE_HARDENED_RUNTIME = NO;
-				ENABLE_PREVIEWS = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/bin/macosX64/debugFramework",
@@ -315,22 +346,21 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = org.kmenubar.KMenuBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		2A6D8F262484ABF8002742C6 /* Release */ = {
+		2AAA9F9A2485C1A600790B42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KMenuBar/KMenuBar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3FQW5YTQR8;
-				ENABLE_HARDENED_RUNTIME = NO;
-				ENABLE_PREVIEWS = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/bin/macosX64/debugFramework",
@@ -340,7 +370,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = org.kmenubar.KMenuBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -350,25 +379,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2A6D8F0C2484ABF6002742C6 /* Build configuration list for PBXProject "KMenuBar" */ = {
+		2AAA9F832485C1A500790B42 /* Build configuration list for PBXProject "KMenuBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2A6D8F222484ABF8002742C6 /* Debug */,
-				2A6D8F232484ABF8002742C6 /* Release */,
+				2AAA9F962485C1A600790B42 /* Debug */,
+				2AAA9F972485C1A600790B42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A6D8F242484ABF8002742C6 /* Build configuration list for PBXNativeTarget "KMenuBar" */ = {
+		2AAA9F982485C1A600790B42 /* Build configuration list for PBXNativeTarget "KMenuBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2A6D8F252484ABF8002742C6 /* Debug */,
-				2A6D8F262484ABF8002742C6 /* Release */,
+				2AAA9F992485C1A600790B42 /* Debug */,
+				2AAA9F9A2485C1A600790B42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2A6D8F092484ABF6002742C6 /* Project object */;
+	rootObject = 2AAA9F802485C1A500790B42 /* Project object */;
 }
