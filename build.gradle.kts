@@ -1,14 +1,14 @@
 plugins {
-  kotlin("multiplatform") version "1.3.72"
+  kotlin("multiplatform") version "1.5.31"
 
-  id("com.diffplug.gradle.spotless") version "3.27.2"
+  id("com.diffplug.spotless") version "5.17.0"
 }
 
 repositories {
-  jcenter()
+  mavenCentral()
 }
 
-val kotlinCoroutinesVersion = "1.3.5"
+val kotlinCoroutinesVersion = "1.5.2"
 
 fun kotlinx(name: String, version: String): String = "org.jetbrains.kotlinx:kotlinx-$name:$version"
 
@@ -34,7 +34,7 @@ kotlin {
 
     compilations["main"].apply {
       dependencies {
-        api(kotlinx("coroutines-core-native", kotlinCoroutinesVersion))
+        api(kotlinx("coroutines-core", kotlinCoroutinesVersion))
       }
     }
   }
@@ -49,27 +49,33 @@ spotless {
   }
 
   kotlin {
-    target(fileTree("src") {
-      include("**/*.kt")
-    })
+    target(
+      fileTree("src") {
+        include("**/*.kt")
+      }
+    )
 
-    ktlint().userData(mapOf(
-      "indent_size" to "2",
-      "continuation_indent_size" to "2"
-    ))
+    ktlint().userData(
+      mapOf(
+        "indent_size" to "2",
+        "continuation_indent_size" to "2"
+      )
+    )
     endWithNewline()
   }
 
   kotlinGradle {
-    ktlint().userData(mapOf(
-      "indent_size" to "2",
-      "continuation_indent_size" to "2"
-    ))
+    ktlint().userData(
+      mapOf(
+        "indent_size" to "2",
+        "continuation_indent_size" to "2"
+      )
+    )
     endWithNewline()
   }
 }
 
 tasks.withType<Wrapper> {
-  gradleVersion = "6.4.1"
+  gradleVersion = "7.2"
   distributionType = Wrapper.DistributionType.ALL
 }
